@@ -47,7 +47,7 @@ public class PingPongPanel extends JPanel {
 					firstPlayerResult++;
 					win(1);
 				} else {
-					SoundEffect.PAD_BOUNCE.play();
+					//SoundEffect.PAD_BOUNCE.play();
 					setBallStepXY();
 				}
 				
@@ -58,14 +58,14 @@ public class PingPongPanel extends JPanel {
 					secondPlayerResult++;
 					win(2);
 				} else {
-					SoundEffect.PAD_BOUNCE.play();
+					//SoundEffect.PAD_BOUNCE.play();
 					setBallStepXY();
 				}
 			}
 
 			if (ballY + BALL_SIZE > getSize().getHeight() || ballY < 0) {
 				ballStepY *= -1;
-				SoundEffect.WALL_BOUNCE.play();
+				//SoundEffect.WALL_BOUNCE.play();
 			}
 
 			ballX += this.ballStepX;
@@ -130,7 +130,7 @@ public class PingPongPanel extends JPanel {
 			ballX += ballStepX*10; // final ball movement - exit table
 			ballY += ballStepY*10; 
 		this.stickHits = 0;
-		SoundEffect.SCORE.play();
+		//SoundEffect.SCORE.play();
 		PingPong.setRunning(!PingPong.getRunning()); // Dani
 		centeringStickAndBall(); // Dani
 		setStepX(0);
